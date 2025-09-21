@@ -1,14 +1,22 @@
+import Image from "next/image";
+import Link from "next/link"
 export default function Home() {
   return (
     <main className="min-h-screen bg-gray-50 text-gray-900">
       {/* Navbar */}
       <header className="flex justify-between items-center px-8 py-4 shadow bg-white">
-        <h1 className="text-2xl font-bold text-indigo-600">VividFlo</h1>
-        <nav className="space-x-6">
-          <a href="#services" className="hover:text-indigo-600">Services</a>
-          <a href="#about" className="hover:text-indigo-600">About</a>
-          <a href="#contact" className="hover:text-indigo-600">Contact</a>
-        </nav>
+        <Image 
+        src="/logo.png" 
+        alt="VividFlo Logo" 
+        width={220} 
+        height={70} 
+        priority 
+        />
+      <nav className="space-x-6">
+      <Link href="/services" className="hover:text-indigo-600">Services</Link>
+      <Link href="/about" className="hover:text-indigo-600">About</Link>
+      <Link href="/contact" className="hover:text-indigo-600">Contact</Link>
+      </nav>
       </header>
 
       {/* Hero Section */}
